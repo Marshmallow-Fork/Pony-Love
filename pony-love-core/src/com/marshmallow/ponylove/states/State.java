@@ -15,7 +15,23 @@ public abstract class State {
 		this.gsm = gsm;
 	}
 	
+	/**
+	 * Called every frame.
+	 * @param dt delta time
+	 */
 	public void update(float dt) {}
+	
+	/**
+	 * Called every frame after the update function.
+	 * @param batch the universal SpriteBatch (do not create a new SpriteBatch)
+	 */
 	public void render(SpriteBatch batch) {}
+	
+	/**
+	 * Called when switching states.
+	 * <br/><br/>
+	 * You should call the dispose function on child objects. Ie, Textures, Sprites...
+	 */
+	public void dispose() {}
 	
 }
